@@ -13,7 +13,8 @@ const INMUTABLE_CACHE = 'inmutable-v1';
 
 // Es lo que debería de estar cargado de manera instantánea o lo más rápido posible
 const APP_SHELL = [
-  '/',
+  // El slash solito me sirve sólo en desarrollo
+  // '/',
   'index.html',
   'css/style.css',
   'img/favicon.ico',

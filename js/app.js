@@ -1,8 +1,20 @@
 // 1) Confirmar si el SW está habilitado para el navegador
 // 2) Registrar el SW
 
+var url = window.location.href;
+var swLocation = '/twittor/sw.js';
+
 if(navigator.serviceWorker) {
-    navigator.serviceWorker.register('/sw.js');
+
+    if(url.includes('localhost')) {
+        swLocation = '/sw.js';
+    }
+
+    navigator.serviceWorker.register(swLocation);
+
+
+    // Esto sirve sólo si la aplicación estuviera en la raíz de mi sitio web pero no lo está
+    // navigator.serviceWorker.register('/sw.js');
 }
 
 
